@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{2c7417cc-11cd-4745-850c-d246e60c2ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK">
+      <UniqueIdentifier>{3b122d28-b989-4ea6-84f5-fea7311201a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK\Hooker">
+      <UniqueIdentifier>{e25df1a1-e4e8-43d8-9d64-ea113c76af7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty">
+      <UniqueIdentifier>{89ef717e-fe13-4cf5-b245-27bb4cc9a78c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\imgui">
+      <UniqueIdentifier>{5be0d6ff-0842-4d9e-90c7-1b31a522a39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\imgui\backends">
+      <UniqueIdentifier>{f49435f2-7de5-4d08-a396-09b9af2d68a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\minhook">
+      <UniqueIdentifier>{9433bdac-5716-400a-9146-11b2c533e3a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\minhook\src">
+      <UniqueIdentifier>{ce774123-f571-407d-9c9e-11e1cb055c42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\minhook\src\hde">
+      <UniqueIdentifier>{b832e135-25dd-4c84-aafe-3cf1a46512fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\minhook\include">
+      <UniqueIdentifier>{3ea5e23d-9e60-4cce-88aa-041347c876b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\xorstr">
+      <UniqueIdentifier>{91ba2ded-720a-4c1d-8684-28957177260c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\xorstr\include">
+      <UniqueIdentifier>{bcc2f2ea-c8f0-4493-ba7a-7c587fa4d7a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\kiero">
+      <UniqueIdentifier>{fd67f398-4f5d-4102-b0a6-1e0fe5aa81dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK\Menu">
+      <UniqueIdentifier>{98e13087-625c-41f0-a330-123c8f1d0674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Kaynak Dosyalar">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\Üst Bilgi Dosyaları">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source\SDK\Menu\Design">
+      <UniqueIdentifier>{c859d359-29d9-459f-8f32-3e1d363b6c27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK\Classes">
+      <UniqueIdentifier>{6e8ba34d-09fb-4a3f-8798-ed5e0f4cec31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK\ValveSDK">
+      <UniqueIdentifier>{698acea6-95ae-41a5-9427-ce57f48e432c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Features">
+      <UniqueIdentifier>{cfe02c69-d3fb-4e96-b1cd-df11f066f264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK\ValveSDK\interfaces">
+      <UniqueIdentifier>{dccf0463-1662-4eb7-93b1-ca30157f2919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK\ValveSDK\classes">
+      <UniqueIdentifier>{9399dc1a-740e-4b46-8830-51c485e11957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDK\ValveSDK\classes\math">
+      <UniqueIdentifier>{ec8e9c64-8760-4450-badc-bc9677eaf75d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.hpp">
+      <Filter>Source\Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="wTF.hpp">
+      <Filter>Source\Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\Hooker\Hooker.hpp">
+      <Filter>Source\SDK\Hooker</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\imconfig.h">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\imgui.h">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\imgui_internal.h">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\imstb_rectpack.h">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\imstb_textedit.h">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\imstb_truetype.h">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\backends\imgui_impl_dx9.h">
+      <Filter>Thirdparty\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\imgui\backends\imgui_impl_win32.h">
+      <Filter>Thirdparty\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\src\buffer.h">
+      <Filter>Thirdparty\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\src\trampoline.h">
+      <Filter>Thirdparty\minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\src\hde\hde32.h">
+      <Filter>Thirdparty\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\src\hde\hde64.h">
+      <Filter>Thirdparty\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\src\hde\pstdint.h">
+      <Filter>Thirdparty\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\src\hde\table32.h">
+      <Filter>Thirdparty\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\src\hde\table64.h">
+      <Filter>Thirdparty\minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\minhook\include\MinHook.h">
+      <Filter>Thirdparty\minhook\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\xorstr\include\xorstr.hpp">
+      <Filter>Thirdparty\xorstr\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Thirdparty\kiero\kiero.h">
+      <Filter>Thirdparty\kiero</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\Menu\Menu.hpp">
+      <Filter>Source\SDK\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\Classes\Functions.hpp">
+      <Filter>Source\SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\ValveSDK.hpp">
+      <Filter>Source\SDK\ValveSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Features\Features.hpp">
+      <Filter>Source\Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Settings.hpp">
+      <Filter>Source\Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IAppSystem.h">
+      <Filter>Source\SDK\ValveSDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVDebugOverlay.h">
+      <Filter>Source\SDK\ValveSDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\QAngle.h">
+      <Filter>Source\SDK\ValveSDK\classes\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\Vector.h">
+      <Filter>Source\SDK\ValveSDK\classes\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVEngineClient.h">
+      <Filter>Source\SDK\ValveSDK\interfaces</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source\Kaynak Dosyalar</Filter>
+    </ClCompile>
+    <ClCompile Include="wTF.cpp">
+      <Filter>Source\Kaynak Dosyalar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SDK\Hooker\DirectXHooker.cpp">
+      <Filter>Source\SDK\Hooker</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SDK\Hooker\GameHooker.cpp">
+      <Filter>Source\SDK\Hooker</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\imgui\imgui.cpp">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\imgui\imgui_draw.cpp">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\imgui\imgui_tables.cpp">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\imgui\imgui_widgets.cpp">
+      <Filter>Thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\imgui\backends\imgui_impl_dx9.cpp">
+      <Filter>Thirdparty\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>Thirdparty\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\minhook\src\buffer.c">
+      <Filter>Thirdparty\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\minhook\src\hook.c">
+      <Filter>Thirdparty\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\minhook\src\trampoline.c">
+      <Filter>Thirdparty\minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\minhook\src\hde\hde32.c">
+      <Filter>Thirdparty\minhook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\minhook\src\hde\hde64.c">
+      <Filter>Thirdparty\minhook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="Thirdparty\kiero\kiero.cpp">
+      <Filter>Thirdparty\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SDK\Menu\Menu.cpp">
+      <Filter>Source\SDK\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SDK\Classes\Functions.cpp">
+      <Filter>Source\SDK\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Features\Visuals.cpp">
+      <Filter>Source\Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SDK\ValveSDK\ValveSDK.cpp">
+      <Filter>Source\SDK\ValveSDK</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thirdparty\imgui\.editorconfig">
+      <Filter>Thirdparty\imgui</Filter>
+    </None>
+    <None Include="Thirdparty\imgui\.gitattributes">
+      <Filter>Thirdparty\imgui</Filter>
+    </None>
+    <None Include="Thirdparty\imgui\.gitignore">
+      <Filter>Thirdparty\imgui</Filter>
+    </None>
+    <None Include="Thirdparty\minhook\.editorconfig">
+      <Filter>Thirdparty\minhook</Filter>
+    </None>
+    <None Include="Thirdparty\minhook\.gitignore">
+      <Filter>Thirdparty\minhook</Filter>
+    </None>
+    <None Include="Thirdparty\minhook\README.md">
+      <Filter>Thirdparty\minhook</Filter>
+    </None>
+    <None Include="Thirdparty\xorstr\.gitignore">
+      <Filter>Thirdparty\xorstr</Filter>
+    </None>
+    <None Include="Thirdparty\xorstr\LICENSE">
+      <Filter>Thirdparty\xorstr</Filter>
+    </None>
+    <None Include="Thirdparty\xorstr\README.md">
+      <Filter>Thirdparty\xorstr</Filter>
+    </None>
+    <None Include="Thirdparty\kiero\.gitignore">
+      <Filter>Thirdparty\kiero</Filter>
+    </None>
+    <None Include="Thirdparty\kiero\.gitmodules">
+      <Filter>Thirdparty\kiero</Filter>
+    </None>
+    <None Include="Thirdparty\kiero\LICENSE">
+      <Filter>Thirdparty\kiero</Filter>
+    </None>
+    <None Include="Thirdparty\kiero\README.md">
+      <Filter>Thirdparty\kiero</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Thirdparty\imgui\LICENSE.txt">
+      <Filter>Thirdparty\imgui</Filter>
+    </Text>
+    <Text Include="Thirdparty\minhook\AUTHORS.txt">
+      <Filter>Thirdparty\minhook</Filter>
+    </Text>
+    <Text Include="Thirdparty\minhook\CMakeLists.txt">
+      <Filter>Thirdparty\minhook</Filter>
+    </Text>
+    <Text Include="Thirdparty\minhook\LICENSE.txt">
+      <Filter>Thirdparty\minhook</Filter>
+    </Text>
+    <Text Include="Thirdparty\kiero\METHODSTABLE.txt">
+      <Filter>Thirdparty\kiero</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

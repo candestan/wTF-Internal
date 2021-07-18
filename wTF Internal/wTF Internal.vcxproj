@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8a68c5e6-8927-4f3a-a65e-e0f7114976d8}</ProjectGuid>
+    <RootNamespace>wTFInternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\Root\source\repos\wTF Internal\wTF Internal\Thirdparty\imgui;C:\Users\Root\source\repos\wTF Internal\wTF Internal\Thirdparty\imgui\backends;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;WTFINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;WTFINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;WTFINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;WTFINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.hpp" />
+    <ClInclude Include="Source\Features\Features.hpp" />
+    <ClInclude Include="Source\SDK\Classes\Functions.hpp" />
+    <ClInclude Include="Source\SDK\Hooker\Hooker.hpp" />
+    <ClInclude Include="Source\SDK\Menu\Menu.hpp" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\QAngle.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\Vector.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IAppSystem.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVDebugOverlay.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVEngineClient.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\ValveSDK.hpp" />
+    <ClInclude Include="Source\Settings.hpp" />
+    <ClInclude Include="Thirdparty\imgui\backends\imgui_impl_dx9.h" />
+    <ClInclude Include="Thirdparty\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="Thirdparty\imgui\imconfig.h" />
+    <ClInclude Include="Thirdparty\imgui\imgui.h" />
+    <ClInclude Include="Thirdparty\imgui\imgui_internal.h" />
+    <ClInclude Include="Thirdparty\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Thirdparty\imgui\imstb_textedit.h" />
+    <ClInclude Include="Thirdparty\imgui\imstb_truetype.h" />
+    <ClInclude Include="Thirdparty\kiero\kiero.h" />
+    <ClInclude Include="Thirdparty\minhook\include\MinHook.h" />
+    <ClInclude Include="Thirdparty\minhook\src\buffer.h" />
+    <ClInclude Include="Thirdparty\minhook\src\hde\hde32.h" />
+    <ClInclude Include="Thirdparty\minhook\src\hde\hde64.h" />
+    <ClInclude Include="Thirdparty\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="Thirdparty\minhook\src\hde\table32.h" />
+    <ClInclude Include="Thirdparty\minhook\src\hde\table64.h" />
+    <ClInclude Include="Thirdparty\minhook\src\trampoline.h" />
+    <ClInclude Include="Thirdparty\xorstr\include\xorstr.hpp" />
+    <ClInclude Include="wTF.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Source\Features\Visuals.cpp" />
+    <ClCompile Include="Source\SDK\Classes\Functions.cpp" />
+    <ClCompile Include="Source\SDK\Hooker\DirectXHooker.cpp" />
+    <ClCompile Include="Source\SDK\Hooker\GameHooker.cpp" />
+    <ClCompile Include="Source\SDK\Menu\Menu.cpp" />
+    <ClCompile Include="Source\SDK\ValveSDK\ValveSDK.cpp" />
+    <ClCompile Include="Thirdparty\imgui\backends\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Thirdparty\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Thirdparty\imgui\imgui.cpp" />
+    <ClCompile Include="Thirdparty\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Thirdparty\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Thirdparty\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Thirdparty\kiero\kiero.cpp" />
+    <ClCompile Include="Thirdparty\minhook\src\buffer.c" />
+    <ClCompile Include="Thirdparty\minhook\src\hde\hde32.c" />
+    <ClCompile Include="Thirdparty\minhook\src\hde\hde64.c" />
+    <ClCompile Include="Thirdparty\minhook\src\hook.c" />
+    <ClCompile Include="Thirdparty\minhook\src\trampoline.c" />
+    <ClCompile Include="wTF.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Thirdparty\imgui\.editorconfig" />
+    <None Include="Thirdparty\imgui\.gitattributes" />
+    <None Include="Thirdparty\imgui\.gitignore" />
+    <None Include="Thirdparty\kiero\.gitignore" />
+    <None Include="Thirdparty\kiero\.gitmodules" />
+    <None Include="Thirdparty\kiero\LICENSE" />
+    <None Include="Thirdparty\kiero\README.md" />
+    <None Include="Thirdparty\minhook\.editorconfig" />
+    <None Include="Thirdparty\minhook\.gitignore" />
+    <None Include="Thirdparty\minhook\README.md" />
+    <None Include="Thirdparty\xorstr\.gitignore" />
+    <None Include="Thirdparty\xorstr\LICENSE" />
+    <None Include="Thirdparty\xorstr\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Thirdparty\imgui\LICENSE.txt" />
+    <Text Include="Thirdparty\kiero\METHODSTABLE.txt" />
+    <Text Include="Thirdparty\minhook\AUTHORS.txt" />
+    <Text Include="Thirdparty\minhook\CMakeLists.txt" />
+    <Text Include="Thirdparty\minhook\LICENSE.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
