@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\Root\source\repos\wTF Internal\wTF Internal\Thirdparty\imgui;C:\Users\Root\source\repos\wTF Internal\wTF Internal\Thirdparty\imgui\backends;$(IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\Projects\wTF-Internal\wTF Internal\Thirdparty\imgui;D:\Projects\wTF-Internal\wTF Internal\Thirdparty\imgui\backends;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -160,11 +160,22 @@
     <ClInclude Include="Source\SDK\Classes\Functions.hpp" />
     <ClInclude Include="Source\SDK\Hooker\Hooker.hpp" />
     <ClInclude Include="Source\SDK\Menu\Menu.hpp" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\client_render_handle.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientEntity.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientNetworkable.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientRenderable.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientThinkable.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientUnknown.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IHandleEntity.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\math.h" />
     <ClInclude Include="Source\SDK\ValveSDK\classes\math\QAngle.h" />
     <ClInclude Include="Source\SDK\ValveSDK\classes\math\Vector.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IAppSystem.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IClientEntityList.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IStudioRender.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVDebugOverlay.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVEngineClient.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVModelRender.h" />
     <ClInclude Include="Source\SDK\ValveSDK\ValveSDK.hpp" />
     <ClInclude Include="Source\Settings.hpp" />
     <ClInclude Include="Thirdparty\imgui\backends\imgui_impl_dx9.h" />

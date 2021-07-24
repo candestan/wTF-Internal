@@ -11,6 +11,7 @@
 #include "../Menu/Menu.hpp"
 #include "../Classes/Functions.hpp"
 #include "../ValveSDK/ValveSDK.hpp"
+#include "../../Features/Features.hpp"
 
 namespace GameHooker {
 	VOID Install();

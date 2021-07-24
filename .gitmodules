@@ -1,0 +1,9 @@
+[submodule "wTF Internal/Thirdparty/imgui"]
+	path = wTF Internal/Thirdparty/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "wTF Internal/Thirdparty/minhook"]
+	path = wTF Internal/Thirdparty/minhook
+	url = https://github.com/TsudaKageyu/minhook
+[submodule "wTF Internal/Thirdparty/xorstr"]
+	path = wTF Internal/Thirdparty/xorstr
+	url = https://github.com/JustasMasiulis/xorstr

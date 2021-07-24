@@ -1,7 +1,9 @@
 #pragma once
 
 #include "../Settings.hpp"
+#include "../SDK/ValveSDK/ValveSDK.hpp"
+using namespace ValveSDK;
 
 namespace Visuals {
-	VOID Snapline();
+	VOID Snapline(ImDrawList* drawArea);
 }

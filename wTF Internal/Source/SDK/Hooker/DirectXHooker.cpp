@@ -15,7 +15,6 @@ static HWND hWnd;
 #pragma endregion
 
 #pragma region WIN_WindowProc_Hook
-static WNDPROC DirectXHooker::Originals::oWindowProc;
 LRESULT ImGui_ImplWin32_WndProcHandler(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 static LRESULT CALLBACK hkWINWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 	ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam);
@@ -25,10 +24,9 @@ static LRESULT CALLBACK hkWINWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPA
 #pragma endregion
 
 #pragma region DX9_Present_Hook
-std::add_pointer_t<HRESULT STDMETHODCALLTYPE(IDirect3DDevice9*, const RECT*, const RECT*, HWND, const RGNDATA*)> DirectXHooker::Originals::DXPresent;
 static HRESULT STDMETHODCALLTYPE  hkDXPresent(IDirect3DDevice9* pD3dDevice, const RECT* pSourceRect, const RECT* pDestRect, HWND hDestWindowOverride, const RGNDATA* pDirtyRegion) {
 	DirectXFunctions::SaveState(pD3dDevice);
-	
+
 	static BOOL InitImGuiImplWin32 = ImGui_ImplWin32_Init(hWnd);
 	static BOOL InitImGuiDX9 = ImGui_ImplDX9_Init(pD3dDevice);
 
@@ -37,6 +35,9 @@ static HRESULT STDMETHODCALLTYPE  hkDXPresent(IDirect3DDevice9* pD3dDevice, cons
 	ImGui::NewFrame();
 
 	MenuRenderer::RenderMenu(); //Calling Menu Renderer.
+
+	static ImDrawList* drawList = ImGui::GetBackgroundDrawList();
+	Visuals::Snapline(drawList);
 
 	ImGui::EndFrame();
 	ImGui::Render();
@@ -53,30 +54,43 @@ static HRESULT STDMETHODCALLTYPE  hkDXPresent(IDirect3DDevice9* pD3dDevice, cons
 #pragma endregion
 
 #pragma region DX9_Reset_Hook
-std::add_pointer_t<HRESULT STDMETHODCALLTYPE(IDirect3DDevice9*, D3DPRESENT_PARAMETERS*)> DirectXHooker::Originals::DXReset;
 static HRESULT STDMETHODCALLTYPE  hkDXReset(IDirect3DDevice9* pD3dDevice, D3DPRESENT_PARAMETERS* D3DPRESENT_PARAMETERS) {
 	ImGui_ImplDX9_InvalidateDeviceObjects();
 	return DirectXHooker::Originals::DXReset(pD3dDevice, D3DPRESENT_PARAMETERS);
 }
 #pragma endregion
 
-BOOL DirectXHooker::Install() {
-	bool attached = false;
-	do
-	{
-		if (kiero::init(kiero::RenderType::D3D9) == kiero::Status::Success)
+namespace DirectXHooker {
+	static WNDPROC Originals::oWindowProc;
+
+	std::add_pointer_t<HRESULT STDMETHODCALLTYPE(IDirect3DDevice9*, const RECT*, const RECT*, HWND, const RGNDATA*)> Originals::DXPresent;
+	std::add_pointer_t<HRESULT STDMETHODCALLTYPE(IDirect3DDevice9*, D3DPRESENT_PARAMETERS*)> Originals::DXReset;
+
+	BOOL Install() {
+		bool attached = false;
+		do
 		{
-			MenuRenderer::Initialize();
+			if (kiero::init(kiero::RenderType::D3D9) == kiero::Status::Success)
+			{
+				MenuRenderer::Initialize();
 
-			hWnd = FindWindow(_("Valve001"), NULL);
-			if (!hWnd) return FALSE;
-			else Originals::oWindowProc = WNDPROC(SetWindowLongPtrW(hWnd, GWLP_WNDPROC, LONG_PTR(hkWINWindowProc)));
+				hWnd = FindWindow(_("Valve001"), NULL);
+				if (!hWnd) return FALSE;
+				else Originals::oWindowProc = WNDPROC(SetWindowLongPtrW(hWnd, GWLP_WNDPROC, LONG_PTR(hkWINWindowProc)));
 
-			kiero::bind(DirectXTable::Reset, (void**)&Originals::DXReset, hkDXReset);
-			kiero::bind(DirectXTable::Present, (void**)&Originals::DXPresent, hkDXPresent);
+				kiero::bind(DirectXTable::Reset, (void**)&Originals::DXReset, hkDXReset);
+				kiero::bind(DirectXTable::Present, (void**)&Originals::DXPresent, hkDXPresent);
 
-			attached = true;
-		}
-	} while (!attached);
-	return TRUE;
+				attached = true;
+			}
+		} while (!attached);
+		return TRUE;
+	}
+
+	VOID Uninstall() {
+		Originals::oWindowProc = WNDPROC(SetWindowLongPtrW(hWnd, GWLP_WNDPROC, LONG_PTR(Originals::oWindowProc)));
+		free(hWnd);
+		kiero::unbind(DirectXTable::Reset);
+		kiero::unbind(DirectXTable::Present);
+	}
 }

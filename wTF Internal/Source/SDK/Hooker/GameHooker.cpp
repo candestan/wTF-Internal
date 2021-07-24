@@ -12,3 +12,7 @@
 VOID GameHooker::Install() {
 	ValveSDK::Initialize();
 }
+
+VOID GameHooker::Uninstall() {
+	ValveSDK::Uninitialize();
+}

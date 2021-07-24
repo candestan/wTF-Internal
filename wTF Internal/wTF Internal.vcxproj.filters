@@ -167,6 +167,39 @@
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVEngineClient.h">
       <Filter>Source\SDK\ValveSDK\interfaces</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IClientEntityList.h">
+      <Filter>Source\SDK\ValveSDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientEntity.h">
+      <Filter>Source\SDK\ValveSDK\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientRenderable.h">
+      <Filter>Source\SDK\ValveSDK\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\math.h">
+      <Filter>Source\SDK\ValveSDK\classes\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientUnknown.h">
+      <Filter>Source\SDK\ValveSDK\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IHandleEntity.h">
+      <Filter>Source\SDK\ValveSDK\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\client_render_handle.h">
+      <Filter>Source\SDK\ValveSDK\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVModelRender.h">
+      <Filter>Source\SDK\ValveSDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IStudioRender.h">
+      <Filter>Source\SDK\ValveSDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientNetworkable.h">
+      <Filter>Source\SDK\ValveSDK\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\IClientThinkable.h">
+      <Filter>Source\SDK\ValveSDK\classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

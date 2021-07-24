@@ -13,31 +13,30 @@
 
 //Interfaces
 #include "interfaces/IAppSystem.h"
+#include "interfaces/IClientEntityList.h"
 #include "interfaces/IVDebugOverlay.h"
 #include "interfaces/IVEngineClient.h"
 
 //Classes
 	//math
-	#include "classes/math/QAngle.h"
-	#include "classes/math/Vector.h"
+	#include "classes/math/math.h"
+#include "classes/IClientEntity.h"
 	
 
 namespace ValveSDK {
 	namespace Interfaces {
+		EXTERN IClientEntityList* clientEntityList;
 		EXTERN IVDebugOverlay* debugOverlay;
 		EXTERN IVEngineClient* engineClient;
 	};
 
 	namespace Modules {
 		EXTERN HMODULE clientModule;
-		EXTERN CreateInterfaceFn CIClient;
 		EXTERN HMODULE engineModule;
-		EXTERN CreateInterfaceFn CIEngine;
 		EXTERN HMODULE vGuiModule;
-		EXTERN CreateInterfaceFn CIVGui;
 		EXTERN HMODULE matSurfaceModule;
-		EXTERN CreateInterfaceFn CIMatSurface;
 	};
 
-	EXTERN BOOL Initialize();
+	VOID Initialize();
+	VOID Uninitialize();
 }
