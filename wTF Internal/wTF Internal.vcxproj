@@ -170,6 +170,7 @@
     <ClInclude Include="Source\SDK\ValveSDK\classes\math\math.h" />
     <ClInclude Include="Source\SDK\ValveSDK\classes\math\QAngle.h" />
     <ClInclude Include="Source\SDK\ValveSDK\classes\math\Vector.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\VMatrix.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IAppSystem.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IClientEntityList.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IStudioRender.h" />
@@ -205,6 +206,7 @@
     <ClCompile Include="Source\SDK\Hooker\DirectXHooker.cpp" />
     <ClCompile Include="Source\SDK\Hooker\GameHooker.cpp" />
     <ClCompile Include="Source\SDK\Menu\Menu.cpp" />
+    <ClCompile Include="Source\SDK\ValveSDK\classes\math\VMatrix.cpp" />
     <ClCompile Include="Source\SDK\ValveSDK\ValveSDK.cpp" />
     <ClCompile Include="Thirdparty\imgui\backends\imgui_impl_dx9.cpp" />
     <ClCompile Include="Thirdparty\imgui\backends\imgui_impl_win32.cpp" />

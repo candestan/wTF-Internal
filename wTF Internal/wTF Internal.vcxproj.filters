@@ -200,6 +200,9 @@
     <ClInclude Include="Source\SDK\ValveSDK\classes\IClientThinkable.h">
       <Filter>Source\SDK\ValveSDK\classes</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\classes\math\VMatrix.h">
+      <Filter>Source\SDK\ValveSDK\classes\math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -261,6 +264,9 @@
     </ClCompile>
     <ClCompile Include="Source\SDK\ValveSDK\ValveSDK.cpp">
       <Filter>Source\SDK\ValveSDK</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SDK\ValveSDK\classes\math\VMatrix.cpp">
+      <Filter>Source\SDK\ValveSDK\classes\math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

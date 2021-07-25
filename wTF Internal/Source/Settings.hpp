@@ -4,5 +4,6 @@
 namespace Settings {
 	namespace Visuals {
 		EXTERN bool Snapline;
+		EXTERN bool NameESP;
 	}
 }

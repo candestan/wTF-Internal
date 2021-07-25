@@ -6,4 +6,5 @@ using namespace ValveSDK;
 
 namespace Visuals {
 	VOID Snapline(ImDrawList* drawArea);
+	VOID NameESP(ImDrawList* drawArea);
 }

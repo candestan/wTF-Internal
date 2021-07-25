@@ -10,6 +10,8 @@
 #include "Hooker.hpp"
 
 VOID GameHooker::Install() {
+	while (!GetModuleHandle(_("serverbrowser.dll")))
+		Sleep(10);
 	ValveSDK::Initialize();
 }
 

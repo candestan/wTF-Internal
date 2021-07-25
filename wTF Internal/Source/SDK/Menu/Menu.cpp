@@ -9,15 +9,17 @@
 
 #include "Menu.hpp"
 bool Settings::Visuals::Snapline = false;
+bool Settings::Visuals::NameESP = false;
 VOID Menu() {
     ImGui::SetNextWindowSize(ImVec2(500, 300));
     ImGui::SetNextWindowBgAlpha(1.0f);
     ImGui::Begin(PROJECT_NAME, NULL, ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse); {
         ImGui::Text(_("This is means we sucsessfully hooked!"));
-        static bool test = false;
+        static bool test = true;
         ImGui::Checkbox(_("TEST"), &test);
         if (test) ImGui::Text(_("Test is passed!!"));
         ImGui::Checkbox(_("Snaplines"), &Settings::Visuals::Snapline);
+        ImGui::Checkbox(_("Name ESP"), &Settings::Visuals::NameESP);
     }
     ImGui::End();
 }

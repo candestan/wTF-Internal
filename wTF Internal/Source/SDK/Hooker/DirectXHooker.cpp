@@ -36,8 +36,9 @@ static HRESULT STDMETHODCALLTYPE  hkDXPresent(IDirect3DDevice9* pD3dDevice, cons
 
 	MenuRenderer::RenderMenu(); //Calling Menu Renderer.
 
-	static ImDrawList* drawList = ImGui::GetBackgroundDrawList();
+	ImDrawList* drawList = ImGui::GetBackgroundDrawList();
 	Visuals::Snapline(drawList);
+	Visuals::NameESP(drawList);
 
 	ImGui::EndFrame();
 	ImGui::Render();
