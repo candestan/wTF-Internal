@@ -223,6 +223,10 @@
     <ClCompile Include="wTF.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.gitignore" />
+    <None Include="..\.gitmodules" />
+    <None Include="..\LICENSE" />
+    <None Include="..\README.md" />
     <None Include="Thirdparty\imgui\.editorconfig" />
     <None Include="Thirdparty\imgui\.gitattributes" />
     <None Include="Thirdparty\imgui\.gitignore" />

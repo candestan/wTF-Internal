@@ -309,6 +309,10 @@
     <None Include="Thirdparty\kiero\README.md">
       <Filter>Thirdparty\kiero</Filter>
     </None>
+    <None Include="..\.gitignore" />
+    <None Include="..\.gitmodules" />
+    <None Include="..\LICENSE" />
+    <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Thirdparty\imgui\LICENSE.txt">

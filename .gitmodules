@@ -7,3 +7,6 @@
 [submodule "wTF Internal/Thirdparty/xorstr"]
 	path = wTF Internal/Thirdparty/xorstr
 	url = https://github.com/JustasMasiulis/xorstr
+[submodule "wTF Internal/Thirdparty/freetype"]
+	path = wTF Internal/Thirdparty/freetype
+	url = https://github.com/freetype/freetype
