@@ -18,7 +18,6 @@
 #include <assert.h>
 
 struct model_t;
-struct matrix3x4_t;
 
 void DefaultRenderBoundsWorldspace(IClientRenderable* pRenderable, Vector& absMins, Vector& absMaxs);
 

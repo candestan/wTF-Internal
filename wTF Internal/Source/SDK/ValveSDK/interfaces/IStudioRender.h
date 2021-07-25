@@ -30,7 +30,6 @@ struct studiohwdata_t;
 struct Ray_t;
 class Vector4D;
 class IMaterialSystem;
-struct matrix3x4_t;
 class IMesh;
 struct vertexFileHeader_t;
 struct FlashlightState_t;
