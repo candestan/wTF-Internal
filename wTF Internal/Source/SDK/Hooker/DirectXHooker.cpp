@@ -19,7 +19,7 @@ LRESULT ImGui_ImplWin32_WndProcHandler(HWND hwnd, UINT uMsg, WPARAM wParam, LPAR
 static LRESULT CALLBACK hkWINWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 	ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam);
 
-	return CallWindowProcA(DirectXHooker::Originals::oWindowProc, hwnd, uMsg, wParam, lParam);
+	return CallWindowProc(DirectXHooker::Originals::oWindowProc, hwnd, uMsg, wParam, lParam);
 }
 #pragma endregion
 
@@ -36,9 +36,8 @@ static HRESULT STDMETHODCALLTYPE  hkDXPresent(IDirect3DDevice9* pD3dDevice, cons
 
 	MenuRenderer::RenderMenu(); //Calling Menu Renderer.
 
-	ImDrawList* drawList = ImGui::GetBackgroundDrawList();
-	Visuals::Snapline(drawList);
-	Visuals::NameESP(drawList);
+	Visuals::Snapline(ImGui::GetBackgroundDrawList());
+	Visuals::NameESP(ImGui::GetBackgroundDrawList());
 
 	ImGui::EndFrame();
 	ImGui::Render();

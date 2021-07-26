@@ -173,6 +173,7 @@
     <ClInclude Include="Source\SDK\ValveSDK\classes\math\VMatrix.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IAppSystem.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IClientEntityList.h" />
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IInputSystem.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IStudioRender.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVDebugOverlay.h" />
     <ClInclude Include="Source\SDK\ValveSDK\interfaces\IVEngineClient.h" />

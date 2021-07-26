@@ -203,6 +203,9 @@
     <ClInclude Include="Source\SDK\ValveSDK\classes\math\VMatrix.h">
       <Filter>Source\SDK\ValveSDK\classes\math</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SDK\ValveSDK\interfaces\IInputSystem.h">
+      <Filter>Source\SDK\ValveSDK\interfaces</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

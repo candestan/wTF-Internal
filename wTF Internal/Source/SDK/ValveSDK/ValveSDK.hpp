@@ -16,6 +16,7 @@
 #include "interfaces/IClientEntityList.h"
 #include "interfaces/IVDebugOverlay.h"
 #include "interfaces/IVEngineClient.h"
+#include "interfaces/IInputSystem.h"
 
 //Classes
 	//math
@@ -28,6 +29,7 @@ namespace ValveSDK {
 		EXTERN IClientEntityList* clientEntityList;
 		EXTERN IVDebugOverlay* debugOverlay;
 		EXTERN IVEngineClient* engineClient;
+		EXTERN IInputSystem* inputSystem;
 	};
 
 	namespace Modules {
@@ -35,6 +37,7 @@ namespace ValveSDK {
 		EXTERN HMODULE engineModule;
 		EXTERN HMODULE vGuiModule;
 		EXTERN HMODULE matSurfaceModule;
+		EXTERN HMODULE inputSystemModule;
 	};
 
 	VOID Initialize();

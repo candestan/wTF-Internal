@@ -8,6 +8,7 @@
 
 
 #include "Menu.hpp"
+#include "../ValveSDK/ValveSDK.hpp"
 bool Settings::Visuals::Snapline = false;
 bool Settings::Visuals::NameESP = false;
 VOID Menu() {
@@ -31,7 +32,14 @@ BOOL CreateFontAtlas() {
 BOOL MenuRenderer::_VISIBLE = false;
 VOID MenuRenderer::RenderMenu() {
     // Start the handling Open&Close input
-    if (ImGui::GetIO().KeysDownDuration[VK_INSERT] == 0.0f)  MenuRenderer::_VISIBLE = !MenuRenderer::_VISIBLE;
+    if (ImGui::GetIO().KeysDownDuration[VK_INSERT] == 0.0f) {
+        MenuRenderer::_VISIBLE = !MenuRenderer::_VISIBLE;
+        //if (MenuRenderer::_VISIBLE)
+        //    ValveSDK::Interfaces::engineClient->ClientCmd_Unrestricted("cl_mouseenable 0");
+        //else
+        //    ValveSDK::Interfaces::engineClient->ClientCmd_Unrestricted("cl_mouseenable 1");
+    }
+    ImGui::GetIO().MouseDrawCursor = _VISIBLE;
     // Render the Menu as an Intellectual
     if (_VISIBLE) Menu();
 }

@@ -8,6 +8,8 @@
 
 
 #include "Hooker.hpp"
+#include "../../../Thirdparty/minhook/include/MinHook.h"
+
 
 VOID GameHooker::Install() {
 	while (!GetModuleHandle(_("serverbrowser.dll")))
